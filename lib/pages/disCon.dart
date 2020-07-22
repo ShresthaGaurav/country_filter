@@ -23,7 +23,9 @@ class _DisplayContState extends State<DisplayCont> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('/sin', arguments: names[index]);
+                },
                 title: Text(
                   names[index]['name'],
                   style: TextStyle(fontSize: 18, color: Colors.teal),
